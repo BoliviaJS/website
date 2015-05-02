@@ -1,0 +1,25 @@
+{
+  "name": "boliviajs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/BoliviaJS/boliviajs.github.io",
+  "authors": [
+    "Rene Polo <renejpolo@me.com>"
+  ],
+  "description": "Bolivia JS Community",
+  "main": "server.js",
+  "keywords": [
+    "BoliviaJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.14"
+  }
+}
