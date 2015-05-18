@@ -1,4 +1,4 @@
-var demoApp =  angular.module('demoApp',['ui.router', 'demoApp.home','demoApp.events'])
+var demoApp =  angular.module('demoApp',['ui.router', 'demoApp.home','demoApp.events', 'demoApp.timeline'])
 
 
 .config(function($stateProvider, $urlRouterProvider){

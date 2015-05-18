@@ -2,20 +2,46 @@
 <html ng-app="demoApp">
 <head>
 	<script src="lib/angular/angular.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/customstyles.css">
 	<title>Bolivia JS</title>
 </head>
 <body>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">BoliviaJS</a>
+	    </div>
 
-	<div class="container">
-		<a ui-sref="home" class="btn btn-primary">Home</a>
-		<a ui-sref="events" class="btn btn-primary">Events</a>
-		<a href="/blog" class="btn btn-primary">Blog</a>
-	</div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a ui-sref="home" >Inicio</a></li>
+		    <li><a ui-sref="events" >Eventos</a></li>
+	        <li><a href="/blog" >Blog</a></li>
+	        
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
 	<div ui-view class="container"></div>
 	<script src="js/app.js"></script>
 	<script src="js/home.js"></script>
 	<script src="js/events.js"></script>
+	<script src="js/twitter-timeline.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>
