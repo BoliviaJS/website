@@ -1,25 +1,26 @@
-var express = require('express');
-var app = express();
+'use strict';
 
+var app = require('express')();
 
-app.use(express.static(__dirname + '/app'));
+module.exports = {
+  configure: configureServer,
+  setRoutes: setRoutes,
+  start: startServer
+};
 
-app.set('port', process.env.PORT || 3000);
+function configureServer() {
+  console.log('Configuring server..');
+  require('./backend/configuration/express.js')(app);
+}
 
-app.get('/blog', function (req, res) {
-  res.send('Aqui deberian aparecer los estudiantes');
-});
+function setRoutes() {
+  console.log('Setting routes..');
+  require('./routes')(app);
+}
 
-app.get('/users/signup', function(req, res){
-   res.send('Sign Up');
-});
-
-
-app.get('/api/events', function (req, res) {
-  res.json({estudiantes: {nombre: 'rene', apellido:'Polo'}});
-});
-
-
-app.listen(app.get('port'), function() {
-      console.log('Express server listening on port ' + app.get('port'));
-    });
+function startServer() {
+  console.log('Starting the server...');
+  app.listen(app.get('port'), function() {
+    console.log('So now the server is ready and up at %d :)', app.get('port'));
+  });
+}
